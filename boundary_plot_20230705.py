@@ -1,4 +1,4 @@
-#!/home/nivag/cr_population_grid/.env/bin/python
+#!/home/nivag/2023/google-cli-CR/.env/bin/python
 
 import pandas as pd
 import geopandas as gpd
@@ -10,7 +10,7 @@ print('Loading Polygon File....')
 boundary = gpd.read_file('Polygon/Yogyakarta&Sleman.TAB')
 boundary = boundary.to_crs(4326)
 
-dir_path = 'CR_Data/'
+dir_path = 'cr_data1/'
 csv_files = [f for f in os.listdir(dir_path) if f.endswith('.csv')]
 cellrebel_consolidate = pd.DataFrame()
 boundary['geometry-boundary'] = boundary['geometry'].astype(str)
@@ -67,6 +67,7 @@ cellrebel_gpd.reset_index(inplace=True, col_level=1)
 cellrebel_gpd.replace(np.nan, 0, inplace=True)
 
 cellrebel_gpd['Grand Total'] = cellrebel_gpd['3'] + cellrebel_gpd['Indosat Ooredoo'] + cellrebel_gpd['PT Telekomunikasi Indonesia'] + cellrebel_gpd['Smartfren'] + cellrebel_gpd['Telkomsel'] + cellrebel_gpd['XL Axiata'] 
+cellrebel_gpd.rename(columns={1: "3 - Hutchison"}, inplace=True)
 
 print('Saving To file....')
 
