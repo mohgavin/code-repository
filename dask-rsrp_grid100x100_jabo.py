@@ -34,4 +34,4 @@ if __name__ == '__main__':
 	pivot = dask_gdf_mdt.pivot_table(index='geometry_polygon', columns='rsrp', values='rsrp_serving', aggfunc='mean')
 	
 	#pivot = pivot.compute()
-	pivot.to_csv('result/rsrp-pop-alljabo.csv')
+	pivot.to_csv('result/rsrp-alljabo.csv')
