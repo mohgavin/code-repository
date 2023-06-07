@@ -1,0 +1,25 @@
+!table
+!version 300
+!charset WindowsLatin1
+!edit_version 450
+
+Definition Table
+  Type NATIVE Charset "WindowsLatin1"
+  Fields 12
+    Kabkota_no Char (2) ;
+    Kab_kota Char (30) Index 1 ;
+    Prop_no Char (2) ;
+    Propinsi Char (30) Index 2 ;
+    Pendd Float ;
+    Kode_pos Char (20) ;
+    POC Char (40) Index 3 ;
+    Luas_kab Float ;
+    Perimeter_Kab Float ;
+    BPS_Kab_Kota Char (100) ;
+    BPS_Provinsi Char (100) ;
+    XL_Region Char (100) ;
+begin_metadata
+"\IsReadOnly" = "FALSE"
+"\MapInfo" = ""
+"\MapInfo\TableID" = "dd4932a6-3eb2-46f4-8cc2-34bed9d3b5d6"
+end_metadata

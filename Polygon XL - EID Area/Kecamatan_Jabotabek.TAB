@@ -1,0 +1,23 @@
+!table
+!version 300
+!charset WindowsLatin1
+!edit_version 450
+
+Definition Table
+  Type NATIVE Charset "WindowsLatin1"
+  Fields 10
+    Provinsi Char (254) Index 1 ;
+    Kabupaten_Kota Char (254) Index 2 ;
+    Kecamatan Char (254) Index 3 ;
+    ID_Kecamatan Char (254) Index 4 ;
+    Luas_Kec_Sq_Km Float ;
+    Unique_XL Char (254) ;
+    Kecamatan_XL Char (254) ;
+    City_XL Char (254) Index 5 ;
+    Commercial_XL Char (254) Index 6 ;
+    Clutter_Type Char (254) ;
+begin_metadata
+"\IsReadOnly" = "FALSE"
+"\MapInfo" = ""
+"\MapInfo\TableID" = "3ff138b9-2f3f-4d7c-84da-5bf688cf28b6"
+end_metadata
