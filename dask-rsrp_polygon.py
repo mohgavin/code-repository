@@ -15,7 +15,7 @@ if __name__ == '__main__':
 	dask_df_mdt =  dask_pd.read_csv('Compile-MDT/mdt*.csv', usecols=[0,1,2,3,4,6,7,9], assume_missing=True)
 	dask_df_mdt['rsrp'] = 'rsrp'
 	#grid = dask_pd.read_parquet('100x100_gridjabo.parquet')
-	grid = dask_pd.read_csv('grid_folder/grid_train/LRT_Polygon.csv')
+	grid = dask_pd.read_csv('grid_folder/Universitas Indonesia_Depok.csv')
 
 	#dask_df_mdt['combined'] = dask_df_mdt['date'].astype(str) + "@" + dask_df_mdt['hour'].astype(str) + "@" + dask_df_mdt['enodebid'].astype(str) + "@" + dask_df_mdt['ci'].astype(str)
 	print('Processing')
@@ -39,7 +39,7 @@ if __name__ == '__main__':
 	pivot = dask_gdf_mdt.pivot_table(index='combined', columns='rsrp', values='rsrp_serving', aggfunc='mean')
 	
 	#pivot = pivot.compute()
-	pivot.to_csv('result/rsrp-lrt.csv')
+	pivot.to_csv('result/rsrp-polugon.csv')
 	print('Sucess')
 	elapsed = time.perf_counter() - s
 	print(f"{__file__} executed in {elapsed:0.2f} seconds.")
