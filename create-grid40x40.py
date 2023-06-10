@@ -30,4 +30,9 @@ grid.reset_index(inplace=True)
 grid.rename(columns={'index':'id'}, inplace = True)
 
 print('Saving to File....')
-grid.to_csv('grid_folder/40x40grid_alljabo.csv', index=False)
+grid['partition_column'] = grid.index % 15
+
+grid.to_parquet('grid_folder/40x40grid_alljabo.parquet', index=False)
+#grid.to_csv('grid_folder/40x40grid_alljabo.csv', index=False)
+#ddf = da.from_pandas(grid, chunksize=3000000)
+#ddf.to_parquet('/home/nivag/grid_folder/grid_40x40/')
