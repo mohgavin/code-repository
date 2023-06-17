@@ -36,8 +36,10 @@ if __name__ == '__main__':
 	dask_gdf_mdt['rsrp-l1800'] = dask_gdf_mdt['rsrp-l1800'].cat.as_known()
 
 	print('Create Pivot...')
-	pivot = dask_gdf_mdt.pivot_table(index='geometry_polygon', columns='rsrp-l1800', values='rsrp_serving', aggfunc='mean')
+	pivot_mean = dask_gdf_mdt.pivot_table(index='geometry_polygon', columns='rsrp-l1800', values='rsrp_serving', aggfunc='mean')
+	pivot_count = dask_gdf_mdt.pivot_table(index='geometry_polygon', columns='rsrp-l1800', values='rsrp_serving', aggfunc='count')
 
 	print('Saving Files...')	
 	#pivot = pivot.compute()
-	pivot.to_csv('result/rsrp-l1800-alljabo-40x40.csv')
+	pivot_mean.to_csv('result/rsrp-l1800-alljabo-40x40.csv')
+	pivot_count.to_csv('result/rsrp-l1800-alljabo-40x40-pop.csv')
