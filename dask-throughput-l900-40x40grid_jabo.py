@@ -7,7 +7,7 @@ import geopandas as gpd
 from dask.distributed import Client
 
 if __name__ == '__main__':
-	client = Client(n_workers=3, threads_per_worker=4, processes=True)
+	client = Client(n_workers=4, threads_per_worker=3, processes=True)
 	
 	print('Loading Files')
 	dask_df_throughput = dask_pd.read_csv('Compile-UETraffic/ue_traffic*.csv', usecols=[0,1,2,3,4,10,12,13], assume_missing=True)

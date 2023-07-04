@@ -34,7 +34,7 @@ if __name__ == '__main__':
 	dask_gdf_mdt = dask_gdf_mdt.sjoin(dask_gdf_grid, how='inner', predicate='within')
 	dask_gdf_mdt = dask_gdf_mdt.drop(columns=['pointer'])
 
-	dask_gdf_mdt['combined'] = dask_gdf_mdt['site'].astype(str) + "@" + dask_gdf_mdt['id'].astype(str) + "@" + dask_gdf_mdt['enodebid'].astype(str) + "@" + dask_gdf_mdt['ci'].astype(str) + "@" + dask_gdf_mdt['WKT_polygon'].astype(str)
+	dask_gdf_mdt['combined'] = dask_gdf_mdt['site'].astype(str) + "@" + dask_gdf_mdt['enodebid'].astype(str) + "@" + dask_gdf_mdt['ci'].astype(str) + "@" + dask_gdf_mdt['WKT_polygon'].astype(str) + "@" + dask_gdf_mdt['polygon_name'].astype(str)
 	dask_gdf_mdt['rsrp-l1800'] = dask_gdf_mdt['rsrp-l1800'].astype('category')
 	dask_gdf_mdt['rsrp-l1800'] = dask_gdf_mdt['rsrp-l1800'].cat.as_known()
 
