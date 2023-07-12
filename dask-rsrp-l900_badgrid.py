@@ -18,7 +18,7 @@ if __name__ == '__main__':
 	values_to_query = [1, 2, 3, 11, 12, 13, 21, 22, 23, 31, 33, 41, 42, 43, 51]	
 	dask_df_mdt = dask_df_mdt[dask_df_mdt['ci'].isin(values_to_query)]
 
-	grid = dask_pd.read_csv('grid_folder/busy_road_v2.csv')
+	grid = dask_pd.read_csv('grid_folder/result-badgrid-l900.csv')
 
 	#dask_df_mdt['combined'] = dask_df_mdt['date'].astype(str) + "@" + dask_df_mdt['hour'].astype(str) + "@" + dask_df_mdt['enodebid'].astype(str) + "@" + dask_df_mdt['ci'].astype(str)
 	print('Processing')
@@ -34,7 +34,7 @@ if __name__ == '__main__':
 	dask_gdf_mdt = dask_gdf_mdt.sjoin(dask_gdf_grid, how='inner', predicate='within')
 	dask_gdf_mdt = dask_gdf_mdt.drop(columns=['pointer'])
 
-	dask_gdf_mdt['combined'] = dask_gdf_mdt['site'].astype(str) + "@" + dask_gdf_mdt['enodebid'].astype(str) + "@" + dask_gdf_mdt['ci'].astype(str) + "@" + dask_gdf_mdt['WKT_polygon'].astype(str) + "@" + dask_gdf_mdt['polygon_name'].astype(str)
+	dask_gdf_mdt['combined'] = dask_gdf_mdt['site'].astype(str) + "@" + dask_gdf_mdt['enodebid'].astype(str) + "@" + dask_gdf_mdt['ci'].astype(str) + "@" + dask_gdf_mdt['WKT_polygon'].astype(str)
 	dask_gdf_mdt['rsrp-l900'] = dask_gdf_mdt['rsrp-l900'].astype('category')
 	dask_gdf_mdt['rsrp-l900'] = dask_gdf_mdt['rsrp-l900'].cat.as_known()
 

@@ -7,7 +7,7 @@ import geopandas as gpd
 from dask.distributed import Client
 
 if __name__ == '__main__':
-	client = Client(n_workers=4, threads_per_worker=3, processes=True)
+	client = Client(n_workers=3, threads_per_worker=3, processes=True)
 	
 	print('Loading Files...')
 	dask_df_mdt =  dask_pd.read_csv('Compile-MDT/mdt*.csv', usecols=[0,1,2,3,4,6,7,8,9], assume_missing=True)
@@ -36,8 +36,10 @@ if __name__ == '__main__':
 	dask_gdf_mdt['rsrp-l900'] = dask_gdf_mdt['rsrp-l900'].cat.as_known()
 
 	print('Create Pivot...')
-	pivot = dask_gdf_mdt.pivot_table(index='geometry_polygon', columns='rsrp-l900', values='rsrp_serving', aggfunc='mean')
+	pivot_mean = dask_gdf_mdt.pivot_table(index='geometry_polygon', columns='rsrp-l900', values='rsrp_serving', aggfunc='mean')
+	pivot_count = dask_gdf_mdt.pivot_table(index='geometry_polygon', columns='rsrp-l900', values='rsrp_serving', aggfunc='count')
 
 	print('Saving Files...')	
 	#pivot = pivot.compute()
-	pivot.to_csv('result/rsrp-l900-alljabo-40x40.csv')
+	pivot_mean.to_csv('result/rsrp-l900-alljabo-40x40.csv')
+	pivot_count.to_csv('result/rsrp-l900-alljabo-40x40-pop.csv')

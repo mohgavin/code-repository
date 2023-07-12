@@ -7,7 +7,7 @@ import geopandas as gpd
 from dask.distributed import Client
 
 if __name__ == '__main__':
-	client = Client(n_workers=4, threads_per_worker=3, processes=True)
+	client = Client(n_workers=3, threads_per_worker=4, processes=True)
 	
 	print('Loading Files')
 	dask_df_throughput = dask_pd.read_csv('Compile-UETraffic/ue_traffic*.csv', usecols=[0,1,2,3,4,10,12,13], assume_missing=True)
@@ -42,8 +42,8 @@ if __name__ == '__main__':
 	dask_gdf_throughput['UE_Throughput-L900'] = dask_gdf_throughput['UE_Throughput-L900'].cat.as_known()
 
 	print('Create Pivot')
-	pivot_mean = dask_gdf_throughput.pivot_table(index='combined', columns='UE_Throughput-L900', values='ue_throughput_dl_drb_kbps', aggfunc='mean')
-	pivot_count = dask_gdf_throughput.pivot_table(index='combined', columns='UE_Throughput-L900', values='ue_throughput_dl_drb_kbps', aggfunc='count')
+	pivot_mean = dask_gdf_throughput.pivot_table(index='geometry_polygon', columns='UE_Throughput-L900', values='ue_throughput_dl_drb_kbps', aggfunc='mean')
+	pivot_count = dask_gdf_throughput.pivot_table(index='geometry_polygon', columns='UE_Throughput-L900', values='ue_throughput_dl_drb_kbps', aggfunc='count')
 
 	pivot_mean.to_csv('result/throughput-l900-40x40.csv')
 	pivot_count.to_csv('result/throughput-l900-40x40-pop.csv')
