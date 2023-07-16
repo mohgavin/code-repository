@@ -9,7 +9,7 @@ from dask.distributed import Client
 if __name__ == '__main__':
 	#Original Value
 	#client = Client(n_workers=2, threads_per_worker=4, processes=True)
-	client = Client(n_workers=4, threads_per_worker=6,processes=True)
+	client = Client(n_workers=6, threads_per_worker=6,processes=True)
 	
 	print('Loading Files')
 	dask_df_mdt =  dask_pd.read_csv('Compile-MDT-Polygon/mdt*.csv', usecols=[0,1,2,3,4,6,7,8,9], assume_missing=True)
