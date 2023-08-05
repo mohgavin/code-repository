@@ -1,0 +1,13 @@
+!table
+!version 950
+!charset WindowsLatin1
+
+Definition Table
+  Type NATIVE Charset "WindowsLatin1"
+  Fields 1
+    Polygon_GBK_Senayan Char (10) ;
+begin_metadata
+"\IsReadOnly" = "FALSE"
+"\MapInfo" = ""
+"\MapInfo\TableID" = "c8284656-94c9-4b93-986a-afe82b2a2d24"
+end_metadata

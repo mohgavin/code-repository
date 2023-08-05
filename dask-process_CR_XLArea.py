@@ -26,4 +26,4 @@ if __name__ == '__main__':
 	dask_gdf_mdt = dask_gdf_mdt.sjoin(kecamatan, how='inner', predicate='within')
 	dask_gdf_mdt = dask_gdf_mdt.drop(columns=['pointer', 'index_right', 'WKT', 'Kecamatan', 'ID_Kecamatan', 'Luas_Kec_Sq_Km', 'Unique_XL', 'Kecamatan_XL', 'City_XL', 'Commercial_XL', 'Clutter_Type'])
 
-	dask_gdf_mdt.to_csv('result/cr-result-xlarea.csv')
+	dask_gdf_mdt.to_csv('result/cr-rsrp-result-xlarea.csv')
