@@ -3,8 +3,8 @@
 import os
 import shutil
 
-source_folders = ['/home/nivag/8007-MDT-Polygon', '/home/nivag/8008-MDT-Polygon', '/home/nivag/8009-MDT-Polygon']
-target_folder = '/home/nivag/Compile-ZIP-MDT-Polygon'
+source_folders = ['/home/nivag/8009-MDT']
+target_folder = '/home/nivag/Compile-ZIP-MDT-Yogyasleman'
 
 # Create the target folder if it doesn't exist
 os.makedirs(target_folder, exist_ok=True)

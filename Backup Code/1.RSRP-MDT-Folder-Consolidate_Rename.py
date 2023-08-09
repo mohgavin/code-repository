@@ -3,8 +3,8 @@
 import os
 import shutil
 
-source_folders = ['/home/nivag/8007-MDT-Polygon', '/home/nivag/8008-MDT-Polygon', '/home/nivag/8009-MDT-Polygon']
-target_folder = '/home/nivag/Compile-ZIP-MDT-Polygon'
+source_folders = ['/home/nivag/8007-MDT', '/home/nivag/8008-MDT', '/home/nivag/8009-MDT']
+target_folder = '/home/nivag/Compile-ZIP-MDT'
 
 # Create the target folder if it doesn't exist
 os.makedirs(target_folder, exist_ok=True)
@@ -29,3 +29,5 @@ for source_folder in source_folders:
 
             # Copy the file to the target folder with the new filename
             shutil.copy(source_path, target_path)
+
+print('Script Finish...')

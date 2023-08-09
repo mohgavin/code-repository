@@ -7,10 +7,10 @@ import geopandas as gpd
 from dask.distributed import Client
 
 if __name__ == '__main__':
-	client = Client(n_workers=3, threads_per_worker=3, processes=True)
+	client = Client(n_workers=6, threads_per_worker=2, processes=True, env={"MALLOC_TRIM_THRESHOLD_":0})
 	
 	print('Loading Files...')
-	dask_df_mdt =  dask_pd.read_csv('Compile-MDT/mdt*.csv', usecols=[0,1,2,3,4,6,7,8,9], assume_missing=True)
+	dask_df_mdt =  dask_pd.read_csv('Compile-MDT/mdt*.csv', usecols=[2,4,6,7,9], assume_missing=True, blocksize="150MB")
 	dask_df_mdt['rsrp-l900'] = 'rsrp-l900'
 
 	values_to_query = [1, 2, 3, 11, 12, 13, 21, 22, 23, 31, 33, 41, 42, 43, 51]
@@ -43,3 +43,7 @@ if __name__ == '__main__':
 	#pivot = pivot.compute()
 	pivot_mean.to_csv('result/rsrp-l900-alljabo-40x40.csv')
 	pivot_count.to_csv('result/rsrp-l900-alljabo-40x40-pop.csv')
+
+	print('Finished...')
+
+	client.close()

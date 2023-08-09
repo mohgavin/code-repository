@@ -3,8 +3,8 @@
 import os
 import shutil
 
-source_folders = ['/home/nivag/8007-MDT-Polygon', '/home/nivag/8008-MDT-Polygon', '/home/nivag/8009-MDT-Polygon']
-target_folder = '/home/nivag/Compile-ZIP-MDT-Polygon'
+source_folders = ['/home/nivag/8007-UETraffic', '/home/nivag/8008-UETraffic', '/home/nivag/8009-UETraffic']
+target_folder = '/home/nivag/Compile-ZIP-UETraffic'
 
 # Create the target folder if it doesn't exist
 os.makedirs(target_folder, exist_ok=True)
@@ -22,7 +22,7 @@ for source_folder in source_folders:
             # Generate the new filename by combining the original filename and relative path
             new_file_name = file_name + '_' + relative_path.replace('/', '_')
 
-            new_file_name = new_file_name.replace('mdt_result.zip_var_opt_common5_mdt_', source_folder.split('/')[-1] + '_')
+            new_file_name = new_file_name.replace('ue_traffic.zip_var_opt_common5_mdt_', source_folder.split('/')[-1] + '_')
 
             # Create the target file path by joining the target folder and new filename
             target_path = os.path.join(target_folder, new_file_name)

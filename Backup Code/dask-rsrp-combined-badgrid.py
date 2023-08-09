@@ -10,15 +10,15 @@ if __name__ == '__main__':
 	client = Client(n_workers=18, threads_per_worker=2, processes=True, env={"MALLOC_TRIM_THRESHOLD_":0})
 	
 	print('Loading Files...')
-	dask_df_mdt =  dask_pd.read_csv('Compile-MDT-Polygon/mdt*.csv', usecols=[2,3,4,6,7,9], low_memory=False, assume_missing=True, blocksize="250MB")
+	dask_df_mdt =  dask_pd.read_csv('Compile-MDT/mdt*.csv', usecols=[2,3,4,6,7,9], low_memory=False, assume_missing=True, blocksize="250MB")
 	dask_df_mdt['rsrp'] = 'rsrp'
 	#grid = dask_pd.read_parquet('100x100_gridjabo.parquet')
-	grid = dask_pd.read_csv('grid_folder/GBK_Senayan.csv')
+	grid = dask_pd.read_csv('grid_folder/result-bad-grid-combined.csv')
 
 	#dask_df_mdt['combined'] = dask_df_mdt['date'].astype(str) + "@" + dask_df_mdt['hour'].astype(str) + "@" + dask_df_mdt['enodebid'].astype(str) + "@" + dask_df_mdt['ci'].astype(str)
 	print('Processing')
-	grid['WKT_polygon'] = grid['WKT'].astype(str)
-	grid = grid[['WKT_polygon']]
+	grid['WKT_polygon'] = grid['geometry'].astype(str)
+	grid = grid[['rsrp-combined-qty', 'rsrp-combined-avg', 'WKT_polygon']]
 	
 	dask_df_mdt['pointer'] = "POINT (" + dask_df_mdt['longitude'].astype(str) + " " + dask_df_mdt['latitude'].astype(str) + ")"
 	dask_gdf_mdt = dask_gpd.from_dask_dataframe(dask_df_mdt, geometry=dask_df_mdt["pointer"].map_partitions(gpd.GeoSeries.from_wkt, meta=gpd.GeoSeries([])),)
@@ -40,7 +40,7 @@ if __name__ == '__main__':
 	pivot_count = dask_gdf_mdt.pivot_table(index='combined', columns='rsrp', values='rsrp_serving', aggfunc='count')	
 
 	#pivot = pivot.compute()
-	pivot_mean.to_csv('result/rsrp-combined-cellcontributor-polygon.csv')
-	pivot_count.to_csv('result/rsrp-combined-cellcontributor-polygon-pop.csv')
+	pivot_mean.to_csv('result/rsrp-combined-cellcontributor-badgrid.csv')
+	pivot_count.to_csv('result/rsrp-combined-cellcontributor-badgrid-pop.csv')
 
-	print('Finished...')
+	

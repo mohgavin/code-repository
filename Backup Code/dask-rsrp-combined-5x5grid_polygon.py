@@ -7,12 +7,12 @@ import geopandas as gpd
 from dask.distributed import Client
 
 if __name__ == '__main__':
-	client = Client(n_workers=5, threads_per_worker=2, processes=True, env={"MALLOC_TRIM_THRESHOLD_":0})
+	client = Client(n_workers=7, threads_per_worker=2, processes=True, env={"MALLOC_TRIM_THRESHOLD_":0})
 	
 	print('Loading Files...')
-	dask_df_mdt =  dask_pd.read_csv('Compile-MDT/mdt*.csv', usecols=[2,4,6,7,9], low_memory=False, assume_missing=True, blocksize="175MB")
+	dask_df_mdt =  dask_pd.read_csv('Compile-MDT-Polygon/mdt*.csv', usecols=[2,4,6,7,9], low_memory=False, assume_missing=True, blocksize="100MB")
 	dask_df_mdt['rsrp-combined'] = 'rsrp-combined'
-	grid = dask_pd.read_parquet('grid_folder/40x40grid_alljabo_filtered.parquet')
+	grid = dask_pd.read_parquet('grid_folder/5x5grid_GBK.parquet')
 
 	print('Processing...')
 	grid['geometry_polygon'] = grid['geometry'].astype(str)
@@ -26,7 +26,7 @@ if __name__ == '__main__':
 
 	print('Join Operation...')
 	dask_gdf_mdt = dask_gdf_mdt.sjoin(dask_gdf_grid, how='inner', predicate='intersects')
-	dask_gdf_mdt = dask_gdf_mdt.drop(columns=['index_right', 'id', 'pointer'])
+	dask_gdf_mdt = dask_gdf_mdt.drop(columns=['pointer'])
 
 	dask_gdf_mdt['rsrp-combined'] = dask_gdf_mdt['rsrp-combined'].astype('category')
 	dask_gdf_mdt['rsrp-combined'] = dask_gdf_mdt['rsrp-combined'].cat.as_known()
@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
 	print('Saving Files...')	
 	#pivot = pivot.compute()
-	pivot_mean.to_csv('result/rsrp-combined-alljabo-40x40.csv')
-	pivot_count.to_csv('result/rsrp-combined-alljabo-40x40-pop.csv')
+	pivot_mean.to_csv('result/rsrp-combined-polygon-5x5.csv')
+	pivot_count.to_csv('result/rsrp-combined-polygon-5x5-pop.csv')
 
 	print('Finished...')

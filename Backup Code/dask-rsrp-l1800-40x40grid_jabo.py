@@ -7,10 +7,11 @@ import geopandas as gpd
 from dask.distributed import Client
 
 if __name__ == '__main__':
-	client = Client(n_workers=4, threads_per_worker=3, processes=True)
+
+	client = Client(n_workers=5, threads_per_worker=2, processes=True, env={"MALLOC_TRIM_THRESHOLD_":0})
 	
 	print('Loading Files...')
-	dask_df_mdt =  dask_pd.read_csv('Compile-MDT/mdt*.csv', usecols=[0,1,2,3,4,6,7,8,9], assume_missing=True)
+	dask_df_mdt =  dask_pd.read_csv('Compile-MDT/mdt*.csv', usecols=[2,4,6,7,9], low_memory=False, assume_missing=True, blocksize="125MB")
 	dask_df_mdt['rsrp-l1800'] = 'rsrp-l1800'
 
 	values_to_query = [4,5,6,14,15,16,17,18,24,25,26,34,35,36,44,45,46,54,55,56,64,65,66,74]
@@ -29,7 +30,7 @@ if __name__ == '__main__':
 	#dask_gdf_grid = dask_gdf_grid.set_crs(4326)
 
 	print('Join Operation...')
-	dask_gdf_mdt = dask_gdf_mdt.sjoin(dask_gdf_grid, how='inner', predicate='within')
+	dask_gdf_mdt = dask_gdf_mdt.sjoin(dask_gdf_grid, how='inner', predicate='intersects')
 	dask_gdf_mdt = dask_gdf_mdt.drop(columns=['index_right', 'id', 'pointer'])
 
 	dask_gdf_mdt['rsrp-l1800'] = dask_gdf_mdt['rsrp-l1800'].astype('category')
@@ -43,3 +44,5 @@ if __name__ == '__main__':
 	#pivot = pivot.compute()
 	pivot_mean.to_csv('result/rsrp-l1800-alljabo-40x40.csv')
 	pivot_count.to_csv('result/rsrp-l1800-alljabo-40x40-pop.csv')
+
+	print('Finished...')

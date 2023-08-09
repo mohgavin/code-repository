@@ -10,12 +10,12 @@ if __name__ == '__main__':
 	client = Client(n_workers=6, threads_per_worker=2, processes=True, env={"MALLOC_TRIM_THRESHOLD_":0})
 	
 	print('Loading Files')
-	dask_df_throughput = dask_pd.read_csv('Compile-UETraffic/ue_traffic*.csv', usecols=[4,10,11,12,13], low_memory=False, assume_missing=True, blocksize="125MB")
+	dask_df_throughput = dask_pd.read_csv('Compile-UETraffic-Polygon/ue_traffic*.csv', usecols=[4,10,11,12,13], low_memory=False, assume_missing=True, blocksize="125MB")
 	
 	values_to_query = [4,5,6,14,15,16,17,18,24,25,26,34,35,36,44,45,46,54,55,56,64,65,66,74]
 	dask_df_throughput = dask_df_throughput[dask_df_throughput['ci'].isin(values_to_query)]
 
-	grid = dask_pd.read_parquet('grid_folder/40x40grid_alljabo_filtered.parquet')
+	grid = dask_pd.read_parquet('grid_folder/5x5grid_GBK.parquet')
 	
 	print('Processing Data...')
 
@@ -46,10 +46,10 @@ if __name__ == '__main__':
 	pivot_ul_mean = dask_gdf_ul_throughput.pivot_table(index='geometry_polygon', columns='UE_Throughput-L1800', values='ue_throughput_ul_drb_kbps', aggfunc='mean')
 	pivot_ul_count = dask_gdf_ul_throughput.pivot_table(index='geometry_polygon', columns='UE_Throughput-L1800', values='ue_throughput_ul_drb_kbps', aggfunc='count')
 
-	pivot_dl_mean.to_csv('result/throughput-dl-l1800-40x40.csv')
-	pivot_dl_count.to_csv('result/throughput-dl-l1800-40x40-pop.csv')
+	pivot_dl_mean.to_csv('result/throughput-dl-l1800-5x5.csv')
+	pivot_dl_count.to_csv('result/throughput-dl-l1800-5x5-pop.csv')
 
-	pivot_ul_mean.to_csv('result/throughput-ul-l1800-40x40.csv')
-	pivot_ul_count.to_csv('result/throughput-ul-l1800-40x40-pop.csv')
+	pivot_ul_mean.to_csv('result/throughput-ul-l1800-5x5.csv')
+	pivot_ul_count.to_csv('result/throughput-ul-l1800-5x5-pop.csv')
 
 	print('Finished...')

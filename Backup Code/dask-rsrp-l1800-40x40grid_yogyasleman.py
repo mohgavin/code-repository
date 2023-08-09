@@ -8,14 +8,15 @@ import pandas as pd
 from dask.distributed import Client
 
 if __name__ == '__main__':
-	client = Client(n_workers=3, threads_per_worker=4, processes=True)
+	client = Client(n_workers=8, threads_per_worker=3, processes=True)
 	
 	print('Loading Files...')
-	dask_df_mdt =  dask_pd.read_csv('Compile-MDT-Yogyasleman/mdt*.csv', usecols=[0,1,2,3,4,6,7,8,9], assume_missing=True, dtype={'rsrp_serving': 'object'})
+	dask_df_mdt =  dask_pd.read_csv('Compile-MDT/mdt*.csv', usecols=[0,1,2,3,4,6,7,8,9], assume_missing=True)
 	dask_df_mdt['rsrp-l1800'] = 'rsrp-l1800'
 
-	dask_df_mdt['isnumberic'] = dask_df_mdt['rsrp_serving'].astype(str).str.isnumeric()
-	dask_df_mdt = dask_df_mdt[dask_df_mdt['isnumberic']==True]
+	#dask_df_mdt['isnumberic'] = dask_df_mdt['rsrp_serving'].astype(str).str.isnumeric()
+	#dask_df_mdt = dask_df_mdt[dask_df_mdt['isnumberic']==True]
+	#dask_df_mdt['rsrp_serving'] = dask_df_mdt['rsrp_serving'].astype(float)
 
 	values_to_query = [4,5,6,14,15,16,17,18,24,25,26,34,35,36,44,45,46,54,55,56,64,65,66,74]
 	dask_df_mdt = dask_df_mdt[dask_df_mdt['ci'].isin(values_to_query)]
