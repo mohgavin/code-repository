@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
 	print('Saving Files...')	
 	#pivot = pivot.compute()
-	pivot_mean.to_csv('result/rsrp-combined-polygon-5x5.csv')
-	pivot_count.to_csv('result/rsrp-combined-polygon-5x5-pop.csv')
+	pivot_mean.to_csv('result/polygon-result/rsrp-combined-polygon-5x5.csv')
+	pivot_count.to_csv('result/polygon-result/rsrp-combined-polygon-5x5-pop.csv')
 
 	print('Finished...')
