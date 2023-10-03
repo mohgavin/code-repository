@@ -1,0 +1,14 @@
+!table
+!version 950
+!charset WindowsLatin1
+
+Definition Table
+  Type NATIVE Charset "WindowsLatin1"
+  Fields 1
+    Commuter_Polygon Char (25) Index 1 ;
+begin_metadata
+"\IsReadOnly" = "FALSE"
+"\MapInfo" = ""
+"\MapInfo\TableID" = "19cab0de-16b6-41cf-8d9d-0b41c7061ef5"
+"\MapInfo\ParentTableID" = "18016aef-7e97-4ce3-8ec6-d7000fd6a194"
+end_metadata

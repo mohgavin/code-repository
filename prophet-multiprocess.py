@@ -6,7 +6,7 @@ from functools import partial
 import holidays
 from prophet import Prophet
 
-average_RRC = pd.read_csv('sample-folder/IOH-Active User-2.csv')
+average_RRC = pd.read_csv('sample-folder/IOH-Active User-3.csv')
 
 list1 = average_RRC.columns[0:]
 result = pd.DataFrame()
@@ -61,7 +61,7 @@ def process_data(x):
     forecast.insert(2, 'SECTOR-ID', x)
     print(x)
     
-    forecast = forecast[forecast['ds'] > pd.to_datetime('2023-08-21')][['ds','yhat','SECTOR-ID']]
+    forecast = forecast[forecast['ds'] > pd.to_datetime('2023-09-10')][['ds','yhat','SECTOR-ID']]
     forecast.rename(columns={'yhat':'y'}, inplace=True)
     forecast = pd.concat([forecast, query], axis=0, ignore_index=True).reset_index(drop=True)
     return forecast
@@ -76,10 +76,10 @@ def parallel_processing(inputs, num_processes=8):
 unique_sector_ids = result['SECTOR-ID'].unique().tolist()
 
 # Define the partial function for the process_data function
-partial_process_data = partial(process_data)
+# partial_process_data = partial(process_data)
 
 # Process the data in parallel
 concatenated_result = parallel_processing(unique_sector_ids)
 
 # Save the concatenated result to a file
-concatenated_result.to_csv('result/prohet-activeuser-result-multiprocess.csv', index=False)
+concatenated_result.to_csv('result/prohet-activeuser-result-multiprocess-1.csv', index=False)

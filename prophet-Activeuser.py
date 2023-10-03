@@ -10,7 +10,7 @@ from prophet.diagnostics import performance_metrics
 from prophet.plot import add_changepoints_to_plot
 import numpy as np
 
-average_RRC = pd.read_csv('sample-folder/IOH-Active User-1.csv')
+average_RRC = pd.read_csv('sample-folder/IOH-Active User-3.csv')
 
 list1 = average_RRC.columns[0:]
 result = pd.DataFrame()
@@ -64,7 +64,7 @@ for x in result['SECTOR-ID'].unique().tolist():
     forecast.insert(2, 'SECTOR-ID', x)
     print(x)
     
-    forecast = forecast[forecast['ds'] > pd.to_datetime('2023-08-21')][['ds','yhat','SECTOR-ID']]
+    forecast = forecast[forecast['ds'] > pd.to_datetime('2023-09-11')][['ds','yhat','SECTOR-ID']]
     forecast.rename(columns={'yhat':'y'}, inplace=True)
     forecast = pd.concat([forecast, query], axis=0, ignore_index=True).reset_index(drop=True)
 
