@@ -1,0 +1,9 @@
+!table
+!version 300
+!charset Neutral
+
+Definition Table
+  Type NATIVE Charset "Neutral"
+  Fields 2
+    id Decimal (10,0) ;
+    poly_name Char (50) ;

@@ -1,0 +1,17 @@
+/var/opt/common5/mdt/20230311/15/mdt_result.zip
+/var/opt/common5/mdt/20230311/16/mdt_result.zip
+/var/opt/common5/mdt/20230311/17/mdt_result.zip
+/var/opt/common5/mdt/20230311/18/mdt_result.zip
+/var/opt/common5/mdt/20230311/19/mdt_result.zip
+/var/opt/common5/mdt/20230311/20/mdt_result.zip
+/var/opt/common5/mdt/20230311/21/mdt_result.zip
+/var/opt/common5/mdt/20230311/22/mdt_result.zip
+/var/opt/common5/mdt/20230312/15/mdt_result.zip
+/var/opt/common5/mdt/20230312/16/mdt_result.zip
+/var/opt/common5/mdt/20230312/17/mdt_result.zip
+/var/opt/common5/mdt/20230312/18/mdt_result.zip
+/var/opt/common5/mdt/20230312/19/mdt_result.zip
+/var/opt/common5/mdt/20230312/20/mdt_result.zip
+/var/opt/common5/mdt/20230312/21/mdt_result.zip
+/var/opt/common5/mdt/20230312/22/mdt_result.zip
+/var/opt/common5/mdt/20230312/23/mdt_result.zip
