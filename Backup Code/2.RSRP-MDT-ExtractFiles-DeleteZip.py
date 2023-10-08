@@ -1,4 +1,4 @@
-#!/home/nivag/.env/bin/python
+#!/home/nivag/.python-3.10/bin/python
 
 import os
 import zipfile
