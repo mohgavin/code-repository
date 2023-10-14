@@ -6,3 +6,10 @@ This is script repository i created during my work. I include some documentation
 
 * Python 3.10
 * Others are included in requirements.txt
+## Installation
+
+##### Clone the repository and move into it
+```
+git clone "https://github.com/mohgavin/code-repository"
+cd code-repository
+```
