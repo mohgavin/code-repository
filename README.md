@@ -16,7 +16,7 @@ cd code-repository
 
 ## Description
 
-calculate ISD.ipynb --> Algorithm to get multiple nearest point/polygon in CRS 3857, Maximal distance is needed. I would like this to be added in the geopandas as nearest_sjoin is not enough for my use case. Will refork the geopandas github and merge them.  
+[calculate ISD.ipynb](https://github.com/mohgavin/code-repository/blob/main/calculate%20ISD.ipynb) --> Algorithm to get multiple nearest point/polygon in CRS 3857, Maximal distance is needed. I would like this to be added in the geopandas as nearest_sjoin is not enough for my use case. Will refork the geopandas github and merge them.  
 
 create Buffer Area.ipynb --> This tools is to create buffer/polygon area around sites and limiting the samples to be inside and intersects with polygon. 
 
