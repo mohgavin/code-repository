@@ -1,5 +1,0 @@
-/var/opt/common5/mdt/20230619/18/ue_traffic.zip
-/var/opt/common5/mdt/20230619/19/ue_traffic.zip
-/var/opt/common5/mdt/20230619/20/ue_traffic.zip
-/var/opt/common5/mdt/20230619/21/ue_traffic.zip
-/var/opt/common5/mdt/20230619/22/ue_traffic.zip
