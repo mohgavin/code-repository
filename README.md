@@ -19,5 +19,5 @@ cd code-repository
 
 [create Buffer Area.ipynb](https://github.com/mohgavin/code-repository/blob/main/create%20Buffer%20Area.ipynb)--> This scripts is to create buffer/polygon area around sites and limiting the samples to be inside and intersects with polygon. 
 
-[create_grid.ipynb](https://github.com/mohgavin/code-repository/blob/main/create_grid.ipynb) --> Algorith to create rectangle grid in CRS 4857. These algorithm requires high memory and computation. Maybe will revisit the algorith in the future and simplified the steps.
+[create_grid.ipynb](https://github.com/mohgavin/code-repository/blob/main/create_grid.ipynb) --> Algorithm to create custom rectangle grid in CRS 4857. These algorithm requires high memory and computation. Maybe will revisit the algorith in the future and simplified the steps.
 
