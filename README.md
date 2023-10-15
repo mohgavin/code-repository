@@ -16,4 +16,7 @@ cd code-repository
 
 ## Description
 
-calculate ISD.ipynb --> Algorithm to get distance (CRS: 3857) for multiple nearest sites in CRS 3857. Maximal distance is needed. 
+calculate ISD.ipynb --> Algorithm to get distance (CRS: 3857) for multiple nearest point/polygon in CRS 3857. Maximal distance is needed. 
+
+create Buffer Area.ipynb --> This tools is to create buffer/polygon area around sites and limiting the samples to be inside and intersects with polygon. 
+
