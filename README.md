@@ -1,7 +1,7 @@
 #  Code Repository
 
 This is script repository i created during my work. I include some documentation and image without adding the confidential files. 
-Please note, for presentation, i am not using any data that represents something
+Please note, for presentation, i am not using any actual data.  
 ## Requirements
 
 * Python 3.10
