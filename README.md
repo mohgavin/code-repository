@@ -25,6 +25,6 @@ cd code-repository
 
 [Big Query](https://github.com/mohgavin/code-repository/tree/main/BigQuery) --> These are script collection to query Big Query SQL from Cell Rebel Crowdsource. It requires JSON or Credential from Application Default Credection of Google Cloud to get the data
 
-[Big_Data_Scripts](https://github.com/mohgavin/code-repository/tree/main/Big_Data_Scripts) --> These are script collection to process big data MDT / Measurement Report from LTE 3GPP. Resukt sample are listed below. 
+[Big_Data_Scripts](https://github.com/mohgavin/code-repository/tree/main/Big_Data_Scripts) --> These are script collection to process big data MDT / Measurement Report from LTE 3GPP. Result sample are listed below. 
 
-[Jaksel](https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Signal%20Power.png)
+![Jaksel - Signal Strength](https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Signal%20Power.png)
