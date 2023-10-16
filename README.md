@@ -27,4 +27,4 @@ cd code-repository
 
 [Big_Data_Scripts](https://github.com/mohgavin/code-repository/tree/main/Big_Data_Scripts) --> These are script collection to process big data MDT / Measurement Report from LTE 3GPP. Result sample are listed below. 
 
-![Jaksel - Signal Strength](https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Signal%20Power.png)
+![Jaksel - Signal Strength](https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Signal%20Power.png =200x200)
