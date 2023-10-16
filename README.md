@@ -1,6 +1,7 @@
 #  Code Repository
 
-This is script repository i created during my work. I include some documentation and image without adding the confidential files.
+This is script repository i created during my work. I include some documentation and image without adding the confidential files. 
+Please note, for presentation, i am not using any data that represents something
 ## Requirements
 
 * Python 3.10
@@ -27,4 +28,4 @@ cd code-repository
 
 [Big_Data_Scripts](https://github.com/mohgavin/code-repository/tree/main/Big_Data_Scripts) --> These are script collection to process big data MDT / Measurement Report from LTE 3GPP. Result sample are listed below. 
 
-![Jaksel - Signal Strength](https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Signal%20Power.png =200x200)
+![Jaksel - Signal Strength|320x271,50%](https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Signal%20Power.png)
