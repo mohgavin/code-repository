@@ -35,6 +35,7 @@ cd code-repository
 </figure>
 
 <figure>
+  <br>
   <img align="centre" src="https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel - Population Map.png" width="450" height="400">
 </figure>
 </p>
