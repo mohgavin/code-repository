@@ -35,4 +35,4 @@ cd code-repository
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-<img align="centre" src="https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Population%20Map.png" width="450" height="400">
+<img align="center" src="https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Population%20Map.png" width="450" height="400">
