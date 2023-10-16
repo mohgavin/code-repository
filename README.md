@@ -1,4 +1,3 @@
-<p align="justify">
 #  Code Repository
 
 This is script repository i created during my work. I include some documentation and image without adding the confidential files. 
@@ -31,9 +30,3 @@ cd code-repository
 <br>
 
 <img align="left" src="https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Signal%20Power.png" width="450" height="400"><img align="right" src="https://github.com/mohgavin/code-repository/blob/main/Picture/GBK%20-%20Throughput%20Power.png" width="450" height="400">
-
-
-
-
-
-Test
