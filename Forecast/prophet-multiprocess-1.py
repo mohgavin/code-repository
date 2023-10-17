@@ -61,7 +61,7 @@ def process_data(x):
     forecast.insert(2, 'SECTOR-ID', x)
     print(x)
     
-    forecast = forecast[forecast['ds'] > pd.to_datetime('2023-09-10')][['ds','yhat','SECTOR-ID']]
+    forecast = forecast[forecast['ds'] > pd.to_datetime('2023-08-21')][['ds','yhat','SECTOR-ID']]
     forecast.rename(columns={'yhat':'y'}, inplace=True)
     forecast = pd.concat([forecast, query], axis=0, ignore_index=True).reset_index(drop=True)
     return forecast
