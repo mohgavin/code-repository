@@ -31,9 +31,9 @@ cd code-repository
 [Big_Data_Scripts](https://github.com/mohgavin/code-repository/tree/main/Big_Data_Scripts) --> These are script collection to process big data MDT / Measurement Report (duration : 1 month - 3 months, approximate : Hundred of Gb to Tb)  from LTE 3GPP. Result sample are listed below. I use pandas, geopandas, dask, py-spark, sedona, and airflow to automatically process the data.   
 
 <p align="center">
-  <img src="https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Signal%20Power.png" width="380" height="400">
-  <img src="https://github.com/mohgavin/code-repository/blob/main/Picture/GBK%20-%20Throughput%20Power.png" width="380" height="400">
-  <img src="https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Population%20Map.png" width="380" height="400">
+  <img src="https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Signal%20Power.png" width="450" height="450">
+  <img src="https://github.com/mohgavin/code-repository/blob/main/Picture/GBK%20-%20Throughput%20Power.png" width="450" height="450">
+  <img src="https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Population%20Map.png" width="450" height="450">
 </p>
 
 [Forecast](https://github.com/mohgavin/code-repository/tree/main/Forecast) --> These are script collection of forecast traffic/active user model (ARIMA, SARIMA, Holt-Winters, and Prophet). The usage multi process (usage on core/thread) to enable parallelization of prophet forecasting can speed up the computation. The impact of holiday or seasonality trend can be seen with the chart seen below. 
