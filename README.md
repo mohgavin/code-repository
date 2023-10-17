@@ -1,5 +1,6 @@
 <p align="justify">
-#  Code Repository
+  
+##  Code Repository
 
 This is script repository i created during my work. I include some documentation and image without adding the confidential files. 
 Please note, for presentation, i am not using any actual data.  
@@ -32,7 +33,7 @@ cd code-repository
 <p align="center">
   <img src="https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Signal%20Power.png" width="380" height="400">
   <img src="https://github.com/mohgavin/code-repository/blob/main/Picture/GBK%20-%20Throughput%20Power.png" width="380" height="400">
-  <img src=https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Population%20Map.png" width="380" height="400">
+  <img src="https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Population%20Map.png" width="380" height="400">
 </p>
 
 [Forecast](https://github.com/mohgavin/code-repository/tree/main/Forecast) --> These are script collection of forecast traffic/active user model (ARIMA, SARIMA, Holt-Winters, and Prophet). The usage multi process (usage on core/thread) to enable parallelization of prophet forecasting can speed up the computation. The impact of holiday or seasonality trend can be seen with the chart seen below. 
