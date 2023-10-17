@@ -67,7 +67,7 @@ def process_data(x):
     return forecast
 
 # Function to handle the parallel processing
-def parallel_processing(inputs, num_processes=8):
+def parallel_processing(inputs, num_processes=12):
     with Pool(num_processes) as pool:
         results = pool.map(process_data, inputs)
     return pd.concat(results, ignore_index=True)
