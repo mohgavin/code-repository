@@ -37,4 +37,8 @@ cd code-repository
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img align="center" src="https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Population%20Map.png" width="380" height="400">
 
+[Forecast](https://github.com/mohgavin/code-repository/tree/main/Forecast) --> These are script collection of forecast traffic model. I use multi process (usage on core/thread) to enable parallelization of prophet forecasting to speed up the computation. I also used the holiday and saturation methods to forecast the traffic or active user. 
+
+
+
  </p>
