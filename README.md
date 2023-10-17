@@ -32,8 +32,7 @@ cd code-repository
 <p align="center">
   <img width="300"  src="https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Signal%20Power.png" width="380" height="400">
   <img width="200"  src="https://github.com/mohgavin/code-repository/blob/main/Picture/GBK%20-%20Throughput%20Power.png" width="380" height="400">
-  <img width="200"  src="static/frontpage/_images/code.jpg">
-  <img width="200"  src="static/frontpage/_images/notebook.gif">
+  <img width="200"  src=https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Population%20Map.png" width="380" height="400">
 </p>
 
 <img align="left" src="https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Signal%20Power.png" >
