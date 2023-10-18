@@ -38,11 +38,12 @@ cd code-repository
 
 [Forecast](https://github.com/mohgavin/code-repository/tree/main/Forecast) --> These are script collection of forecast traffic/active user model (ARIMA, SARIMA, Holt-Winters, and Prophet). Multi process (usage on core/thread) helps to enable parallelization of forecasting so it can speed up the computation. The impact of holiday or seasonality trend can be seen with the chart seen below and the different between actual and forecast data is differentiated. 
 
-
 <p align="center">
   <img src="https://github.com/mohgavin/code-repository/blob/main/Picture/AB%20Testing%20-%20ARIMA%20vs%20Prophet.png">
 </p>
 
-
+<p align="center">
+  <img src="https://github.com/mohgavin/code-repository/blob/main/Picture/Histogram%20-%20Week35%20Delta%20Forecast%20with%20Actual.png">
+</p>
 
  </p>
