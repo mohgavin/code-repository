@@ -6,7 +6,7 @@ from functools import partial
 import holidays
 from prophet import Prophet
 
-average_RRC = pd.read_csv('sample-folder/IOH-Active User-3.csv')
+average_RRC = pd.read_csv('~/2023-Linux/sample-folder/IOH-Active User-6.csv')
 
 list1 = average_RRC.columns[0:]
 result = pd.DataFrame()
@@ -82,4 +82,4 @@ unique_sector_ids = result['SECTOR-ID'].unique().tolist()
 concatenated_result = parallel_processing(unique_sector_ids)
 
 # Save the concatenated result to a file
-concatenated_result.to_csv('result/prohet-activeuser-result-multiprocess-1.csv', index=False)
+concatenated_result.to_csv('~/2023-Linux/result/prohet-activeuser-result-multiprocess-1.csv', index=False)
