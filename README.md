@@ -3,7 +3,7 @@
 ##  Code Repository
 
 This is script repository i created during my work. I include some documentation and image without adding the confidential files. 
-Please note, for presentation, i am not using any actual data.  
+Please note, for presentation, i am not using any actual data and removing sensitive data.  
 ## Requirements
 
 * Python 3.10
@@ -19,6 +19,9 @@ cd code-repository
 ## Description
 
 [calculate ISD.ipynb](https://github.com/mohgavin/code-repository/blob/main/calculate%20ISD.ipynb) --> Algorithm to get multiple nearest point/polygon in CRS 3857, Maximal distance is needed. The nearest_sjoin function is not enough for my use case. Consider to refork the geopandas github and contribute to the library.  
+
+<p align="center">
+</p>
 
 [create Buffer Area.ipynb](https://github.com/mohgavin/code-repository/blob/main/create%20Buffer%20Area.ipynb)--> This scripts is to create buffer/polygon area around sites and used for limiting the samples to be inside and intersects with polygon. 
 
@@ -36,7 +39,7 @@ cd code-repository
   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Jaksel%20-%20Population%20Map.png" width="400" height="400">
 </p>
 
-[Forecast](https://github.com/mohgavin/code-repository/tree/main/forecast) --> These are script collection of forecast traffic/active user model (ARIMA, SARIMA, Holt-Winters, and Prophet). Multi process (usage on core/thread) helps to enable parallelization of forecasting so it can speed up the computation. The impact of holiday or seasonality trend can be seen with the chart seen below and the different between actual and forecast data is differentiated. 
+[forecast](https://github.com/mohgavin/code-repository/tree/main/forecast) --> These are script collection of forecast traffic/active user model (ARIMA, SARIMA, Holt-Winters, and Prophet). Multi process (usage on core/thread) helps to enable parallelization of forecasting so it can speed up the computation. The impact of holiday or seasonality trend can be seen with the chart seen below and the different between actual and forecast data is differentiated. 
 
 <p align="center">
   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/AB%20Testing%20-%20ARIMA%20vs%20Prophet.png">
