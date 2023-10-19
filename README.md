@@ -26,9 +26,9 @@ cd code-repository
 
 [dask-process_CR_XLArea.py](https://github.com/mohgavin/code-repository/blob/main/dask-process_CR_XLArea.py) --> These are scripts to query and intersects point inside polygon of MRT Route of Senayan and Bundaran HI. These are meant to collect MR at underground levels. 
 
-[Big Query](https://github.com/mohgavin/code-repository/tree/main/BigQuery) --> These are script collection to query Big Query SQL from Cell Rebel Crowdsource. It requires JSON or Credential from Application Default Credection of Google Cloud to get the data
+[big Query](https://github.com/mohgavin/code-repository/tree/main/bigquery) --> These are script collection to query Big Query SQL from Cell Rebel Crowdsource. It requires JSON or Credential from Application Default Credection of Google Cloud to get the data
 
-[Big_Data_Scripts](https://github.com/mohgavin/code-repository/tree/main/Big_Data_Scripts) --> These are script collection to process big data MDT / Measurement Report (duration : 1 month - 3 months, approximate : Hundred of Gb to Tb)  from LTE 3GPP. Result sample are listed below. I use pandas, geopandas, dask, py-spark, sedona, and airflow to automatically process the data. 
+[big_Data_Scripts](https://github.com/mohgavin/code-repository/tree/main/big_data_scripts) --> These are script collection to process big data MDT / Measurement Report (duration : 1 month - 3 months, approximate : Hundred of Gb to Tb)  from LTE 3GPP. Result sample are listed below. I use pandas, geopandas, dask, py-spark, sedona, and airflow to automatically process the data. 
 
 <p align="center">
   <img src="https://github.com/mohgavin/code-repository/blob/main/Picture/Jaksel%20-%20Signal%20Power.png" width="400" height="400">
@@ -45,5 +45,7 @@ cd code-repository
 <p align="center">
   <img src="https://github.com/mohgavin/code-repository/blob/main/Picture/Histogram%20-%20Week35%20Delta%20Forecast%20with%20Actual.png">
 </p>
+
+
 
  </p>
