@@ -20,13 +20,10 @@ cd code-repository
 
 [calculate ISD.ipynb](https://github.com/mohgavin/code-repository/blob/main/calculate%20ISD.ipynb) --> Algorithm to get multiple nearest point/polygon in CRS 3857, Maximal distance is needed. The nearest_sjoin function from geopandas is not enough for my use case. Consider to refork the geopandas github and contribute to the library. I also created linestring to connect nearest dots to know its distance
 
-<p align="center">
-  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/ISD%20-%20LineString.png" width="500" height="500">
-</p>
-
 [create Buffer Area.ipynb](https://github.com/mohgavin/code-repository/blob/main/create%20Buffer%20Area.ipynb)--> This scripts is to create buffer/polygon area around sites and used for limiting the samples to be inside and intersects with polygon. 
 
 <p align="center">
+  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/ISD%20-%20LineString.png" width="500" height="500">
   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/inbuilding%20-%20polygon.png" width="500" height="500">
 </p>
 
