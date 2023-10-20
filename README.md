@@ -41,7 +41,7 @@ cd code-repository
   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Jaksel%20-%20Population%20Map.png" width="400" height="400">
 </p>
 
-[forecast](https://github.com/mohgavin/code-repository/tree/main/forecast) --> These are script collection of forecast traffic/active user model (ARIMA, SARIMA, Holt-Winters, and Prophet). Multi process (usage on core/thread) helps to enable parallelization of forecasting so it can speed up the computation (Comparison : 7 Hours Single Threads vs 1 Hours With Multi Core and Threads). The impact of holiday or seasonality trend can be seen with the chart seen below and the different between actual and forecast data is differentiated. 
+[forecast](https://github.com/mohgavin/code-repository/tree/main/forecast) --> These are script collection of forecast traffic/active user model (ARIMA, SARIMA, Holt-Winters, and Prophet). Multi process (usage on core/thread) helps to enable parallelization of forecasting so it can speed up the computation (Comparison : 7 Hours Single Threads vs 1 Hours With 12 Multi Core and Threads). The impact of holiday or seasonality trend can be seen with the chart seen below and the different between actual and forecast data is differentiated. 
 
 <p align="center">
   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/AB%20Testing%20-%20ARIMA%20vs%20Prophet.png">
