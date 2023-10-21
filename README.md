@@ -18,6 +18,16 @@ cd code-repository
 
 ## Description
 
+[forecast](https://github.com/mohgavin/code-repository/tree/main/forecast) --> These are script collection of forecast traffic/active user model (ARIMA, SARIMA, Holt-Winters, and Prophet). Multi process (usage on core/thread) helps to enable parallelization of forecasting so it can speed up the computation (Comparison : 7 Hours Single Threads vs 1 Hours With 12 Multi Core and Threads). The impact of holiday or seasonality trend can be seen with the chart seen below and the different between actual and forecast data is differentiated. 
+
+<p align="center">
+  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/AB%20Testing%20-%20ARIMA%20vs%20Prophet.png">
+</p>
+
+<p align="center">
+  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Histogram%20-%20Week35%20Delta%20Forecast%20with%20Actual.png">
+</p>
+
 [calculate ISD.ipynb](https://github.com/mohgavin/code-repository/blob/main/calculate%20ISD.ipynb) --> Algorithm to get multiple nearest point/polygon in CRS 3857, Maximal distance is needed. The nearest_sjoin function from geopandas is not enough for my use case. Consider to refork the geopandas github and contribute to the library. I also created linestring to connect nearest dots to know its distance
 
 [create Buffer Area.ipynb](https://github.com/mohgavin/code-repository/blob/main/create%20Buffer%20Area.ipynb)--> This scripts is to create buffer/polygon area around sites and used for limiting the samples to be inside and intersects with polygon. 
@@ -41,15 +51,6 @@ cd code-repository
   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Jaksel%20-%20Population%20Map.png" width="400" height="400">
 </p>
 
-[forecast](https://github.com/mohgavin/code-repository/tree/main/forecast) --> These are script collection of forecast traffic/active user model (ARIMA, SARIMA, Holt-Winters, and Prophet). Multi process (usage on core/thread) helps to enable parallelization of forecasting so it can speed up the computation (Comparison : 7 Hours Single Threads vs 1 Hours With 12 Multi Core and Threads). The impact of holiday or seasonality trend can be seen with the chart seen below and the different between actual and forecast data is differentiated. 
-
-<p align="center">
-  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/AB%20Testing%20-%20ARIMA%20vs%20Prophet.png">
-</p>
-
-<p align="center">
-  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Histogram%20-%20Week35%20Delta%20Forecast%20with%20Actual.png">
-</p>
 
 
 
