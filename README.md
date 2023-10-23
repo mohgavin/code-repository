@@ -14,6 +14,10 @@ This is script repository i created during my work. I include some documentation
 ```
 git clone "https://github.com/mohgavin/code-repository"
 cd code-repository
+python3 -m venv .pyhton-3.10
+source .python-3.10/bin/activate
+pip3 install requirements.txt
+
 ```
 
 ## Description
