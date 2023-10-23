@@ -3,7 +3,7 @@
 ##  Code Repository
 
 This is script repository i created during my work. I include some documentation and image without adding the confidential files. 
-Please note, for presentation, i am not using any actual data and removing sensitive data.  
+**DISCLAIMER:** i am not using any actual data and removing sensitive data.  
 ## Requirements
 
 * Python 3.10
