@@ -47,7 +47,7 @@ pip3 install requirements.txt
 
 [big Query](https://github.com/mohgavin/code-repository/tree/main/bigquery) --> Script collection to query Big Query SQL from Cell Rebel Crowdsource. It requires JSON or Credential from Application Default Credection of Google Cloud to get the data
 
-[big_Data_Scripts](https://github.com/mohgavin/code-repository/tree/main/big_data_scripts) --> Script collection to process big data MDT / Measurement Report (duration : 1 month - 3 months, approximate : Hundred of Gb to Tb)  from LTE 3GPP. Result sample are listed below. I use pandas, geopandas, dask, py-spark, sedona, and airflow to automatically process the data. 
+[big_Data_Scripts](https://github.com/mohgavin/code-repository/tree/main/big_Data_Scripts) --> Script collection to process big data MDT / Measurement Report (duration : 1 month - 3 months, approximate : Hundred of Gb to Tb)  from LTE 3GPP. Result sample are listed below. I use pandas, geopandas, dask, py-spark, sedona, and airflow to automatically process the data. 
 
 <p align="center">
   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Jaksel%20-%20Signal%20Power.png" width="400" height="400">
