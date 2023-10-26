@@ -32,7 +32,7 @@ pip3 install requirements.txt
   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Histogram%20-%20Week35%20Delta%20Forecast%20with%20Actual.png">
 </p>
 
-[calculate ISD.ipynb](https://github.com/mohgavin/code-repository/blob/main/calculate%20ISD.ipynb) --> Algorithm to get multiple nearest point/polygon in CRS 3857, Maximal distance is needed. The nearest_sjoin function from geopandas is not enough for my use case. Consider to refork the geopandas github and contribute to the library. I also created linestring to connect nearest dots to know its distance
+[calculate ISD.ipynb](https://github.com/mohgavin/code-repository/blob/main/calculate%20ISD.ipynb) --> Algorithm to get multiple nearest point/polygon in CRS 3857, Maximal distance is needed. The nearest_sjoin function from geopandas is not enough for my use case. Consider to refork the geopandas github and contribute to the library. I also created linestring to connect nearest dots to know its distance and display it in geographic information systems.
 
 [create Buffer Area.ipynb](https://github.com/mohgavin/code-repository/blob/main/create%20Buffer%20Area.ipynb)--> This scripts is to create buffer/polygon area around sites and used for limiting the samples to be inside and intersects with polygon. 
 
@@ -45,9 +45,11 @@ pip3 install requirements.txt
 
 [dask-process_CR_XLArea.py](https://github.com/mohgavin/code-repository/blob/main/dask-process_CR_XLArea.py) --> Script collection to query and intersects point inside polygon of MRT Route of Senayan and Bundaran HI. These are meant to collect MR at underground levels. 
 
-[big Query](https://github.com/mohgavin/code-repository/tree/main/bigquery) --> Script collection to query Big Query SQL from Cell Rebel Crowdsource. It requires JSON or Credential from Application Default Credection of Google Cloud to get the data
+[big Query](https://github.com/mohgavin/code-repository/tree/main/bigquery) --> Script collection to query Big Query SQL from Cell Rebel Crowdsource. It requires JSON or Credential from Application Default Credential of Google Cloud to get the data. To get application default credential, you can access from [here](https://cloud.google.com/docs/authentication/provide-credentials-adc#how-to). 
 
 [big_Data_Scripts](https://github.com/mohgavin/code-repository/tree/main/big_Data_Scripts) --> Script collection to process big data MDT / Measurement Report (duration : 1 month - 3 months, approximate : Hundred of Gb to Tb)  from LTE 3GPP. Result sample are listed below. I use pandas, geopandas, dask, py-spark, sedona, and airflow to automatically process the data. 
+
+[parsing](https://github.com/mohgavin/code-repository/tree/main/parsing) --> Script Collection to get bad grid/cellID of signal/throughput from output of big_Data_Script.  These requires distance from nearest sites or network element, and filter with condition only less than -105dBm or/and number of sample. The output can be configurable from mapinfo/vector files to csv/xlsx/json files.  
 
 <p align="center">
   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Jaksel%20-%20Signal%20Power.png" width="400" height="400">
@@ -55,7 +57,7 @@ pip3 install requirements.txt
   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Jaksel%20-%20Population%20Map.png" width="400" height="400">
 </p>
 
-
+[database_process](https://github.com/mohgavin/code-repository/tree/main/database_process) --> I created this code to have better display of showing radio equipment per sector. I build executable files in windows to be worked in other computer and 
 
 
  </p>
