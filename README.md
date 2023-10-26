@@ -52,10 +52,10 @@ pip3 install requirements.txt
 [parsing](https://github.com/mohgavin/code-repository/tree/main/parsing) --> Script Collection to get bad grid/cellID of signal/throughput from output of big_Data_Script.  These requires distance from nearest sites or network element, and filter with condition only less than -105dBm or/and number of sample. The output can be configurable from mapinfo/vector files to csv/xlsx/json files.  
 
 <p align="center">
-  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Jaksel%20-%20Signal%20Power.png" width="400" height="400">
-  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/pivot_totalpopulation_jaksel.png" width="400" height="400">
   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/GBK%20-%20Throughput%20Power.png" width="400" height="400">
   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Jaksel%20-%20Population%20Map.png" width="400" height="400">
+  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Jaksel%20-%20Signal%20Power.png" width="400" height="400">
+  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/pivot_totalpopulation_jaksel.png" width="400" height="400">
 </p>
 
 [database_process](https://github.com/mohgavin/code-repository/tree/main/database_process) --> I created this code to have better display of showing radio equipment per sector. I build executable files in Windows to be worked in other computer and anyone can run the script without having to install environment in the computer. 
