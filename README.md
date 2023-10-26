@@ -57,7 +57,7 @@ pip3 install requirements.txt
 </p>
 
 <p align="center">
-  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Jaksel%20-%20Signal%20Power.png" width="400" height="400">
+  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Jaksel%20-%20Signal%20Power.png" width="800" height="800">
 </p>
 
 <p align="center">
