@@ -53,6 +53,7 @@ pip3 install requirements.txt
 
 <p align="center">
   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Jaksel%20-%20Signal%20Power.png" width="400" height="400">
+  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/pivot_totalpopulation_jaksel.png" width="400" height="400">
   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/GBK%20-%20Throughput%20Power.png" width="400" height="400">
   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Jaksel%20-%20Population%20Map.png" width="400" height="400">
 </p>
