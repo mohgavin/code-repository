@@ -37,8 +37,8 @@ pip3 install requirements.txt
 [create Buffer Area.ipynb](https://github.com/mohgavin/code-repository/blob/main/create%20Buffer%20Area.ipynb)--> This scripts is to create buffer/polygon area around sites and used for limiting the samples to be inside and intersects with polygon. 
 
 <p align="center">
-  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/ISD%20-%20LineString.png" width="300" height="300">
-  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/inbuilding%20-%20polygon.png" width="300" height="300">
+  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/ISD%20-%20LineString.png" width="400" height="400">
+  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/inbuilding%20-%20polygon.png" width="400" height="400">
 </p>
 
 [create_grid.ipynb](https://github.com/mohgavin/code-repository/blob/main/create_grid.ipynb) --> Algorithm to create custom rectangle grid in CRS 4326. These algorithm requires high memory and computation. Consider to revisit the algorithm in the future and simplified the steps.
