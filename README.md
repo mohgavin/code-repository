@@ -57,7 +57,9 @@ pip3 install requirements.txt
   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Jaksel%20-%20Population%20Map.png" width="400" height="400">
 </p>
 
-[database_process](https://github.com/mohgavin/code-repository/tree/main/database_process) --> I created this code to have better display of showing radio equipment per sector. I build executable files in windows to be worked in other computer and 
+[database_process](https://github.com/mohgavin/code-repository/tree/main/database_process) --> I created this code to have better display of showing radio equipment per sector. I build executable files in windows to be worked in other computer and anyone can run the script without having to install environment in the other computer. 
+
+
 
 
  </p>
