@@ -1,48 +1,40 @@
 #!/home/nivag/2023-Linux/.python-3.10/bin/python
 
 # by @mohgavin
+import os
+import sys
+
+os.environ['PYSPARK_PYTHON'] = sys.executable
+os.environ['PYSPARK_DRIVER_PYTHON'] = sys.executable
+
 from pyspark.sql import SparkSession
+from sedona.spark import *
+from pyspark.sql.functions import col, concat_ws, expr
 from sedona.register import SedonaRegistrator
-from sedona.utils import SedonaKryoRegistrator, SedonaConf
-from pyspark.sql.functions import col, concat_ws
-from pyspark.sql.types import StringType
 
-if __name__ == '__main__':
-    # Initialize Spark session
-    spark = SparkSession.builder.appName("SedonaExample").getOrCreate()
+spark = SparkSession \
+    .builder.master("local") \
+    .appName("MDT Process by Pyspark - Sedona") \
+    .config("spark.driver.bindAddress","localhost") \
+    .config("spark.ui.port","8787") \
+    .getOrCreate()
 
-    # Register Sedona
-    SedonaRegistrator.registerAll(spark)
-    SedonaKryoRegistrator.registerKryoClasses(spark)
+sedona = SedonaContext.builder() .\
+    config('spark.jars.packages',
+           'org.apache.sedona:sedona-spark-shaded-3.5_2.12:1.5.0,'
+           'org.datasyslab:geotools-wrapper:1.5.0-28.2'). \
+    getOrCreate()
 
-    # Set Sedona configuration
-    SedonaConf.addVizServerExecutors(spark._sc)
-    SedonaConf.addVizServerDependency(spark._sc)
+sedona = SedonaContext.create(spark)
 
-    print('Loading Files...')
-    mdt_df = spark.read.csv('Compile-MDT/mdt*.csv', header=True, inferSchema=True)
-    grid_df = spark.read.parquet('grid_folder/40x40grid_alljabo_filtered.parquet')
+spark_sedona_df_mdt =  sedona.read.option("header", True).csv('/mnt/h/Compile-MDT')
+spark_sedona_df_grid = sedona.read.option("header", True).csv('/home/nivag/2023-Linux/csv_polygon/inbuilding.csv')
 
-    # Create Sedona geometries
-    mdt_df = mdt_df.withColumn("pointer", concat_ws(" ", col("longitude").cast(StringType()), col("latitude").cast(StringType())))
-    mdt_df.createOrReplaceTempView("mdt_df")
-    spark.sql("SELECT *, ST_PointFromText(pointer, ' ') AS geom FROM mdt_df").createOrReplaceTempView("mdt_df")
+spark_sedona_df_mdt = spark_sedona_df_mdt.select(col("site"), col("ci"), col("longitude"), col("latitude"), col("rsrp_serving"))
 
-    grid_df = grid_df.withColumn("geometry_polygon", col("geometry").cast(StringType()))
-    grid_df.createOrReplaceTempView("grid_df")
-    spark.sql("SELECT *, ST_GeomFromWKT(geometry_polygon) AS geom FROM grid_df").createOrReplaceTempView("grid_df")
+# spark_sedona_df_mdt = spark_sedona_df_mdt.select('site', 'ci', 
+#                                                 concat_ws(',', spark_sedona_df_mdt['longitude'], spark_sedona_df_mdt['latitude']).alias('Coordinates'), 'rsrp_serving')
 
-    print('Join Operation...')
-    spark.sql("SELECT m.*, g.* FROM mdt_df AS m, grid_df AS g WHERE ST_Intersects(m.geom, g.geom)").createOrReplaceTempView("joined_df")
+spark_sedona_df_mdt = spark_sedona_df_mdt.withColumn("geometry", expr("st_point(longitude, latitude)"))
 
-    # Perform the necessary operations to create pivot tables
-    pivot_mean = spark.sql("SELECT geometry_polygon, rsrp_combined, mean(rsrp_serving) AS mean_rsrp_serving FROM joined_df GROUP BY geometry_polygon, rsrp_combined")
-    pivot_count = spark.sql("SELECT geometry_polygon, rsrp_combined, count(rsrp_serving) AS count_rsrp_serving FROM joined_df GROUP BY geometry_polygon, rsrp_combined")
-
-    print('Saving Files...')
-    pivot_mean.coalesce(1).write.csv('result/rsrp-combined-alljabo-40x40.csv', header=True)
-    pivot_count.coalesce(1).write.csv('result/rsrp-combined-alljabo-40x40-pop.csv', header=True)
-
-    print('Finished...')
-
-    spark.stop()
+spark_sedona_df_mdt.show()
