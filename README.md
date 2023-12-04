@@ -67,7 +67,7 @@ pip3 install requirements.txt
 [database_process](https://github.com/mohgavin/code-repository/tree/main/database_process) --> I created this code to have better display of showing radio equipment per sector. I build executable files in Windows to be worked in other computer and anyone can run the script without having to install environment in the computer. 
 
 <p align="center">
-  img src="https://github.com/mohgavin/code-repository/blob/main/picture/Screenshot%202023-12-04%20123427.png" width="1200" height="400">
+  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Screenshot%202023-12-04%20123427.png" width="1200" height="400">
 </p>
 
  </p>
