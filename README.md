@@ -61,10 +61,10 @@ pip3 install requirements.txt
 </p>
 
 <p align="center">
-   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Kebayoran%20Baru.png" width="400" height="400">
-   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Kebayoran%20Lama.png" width="400" height="400">
-   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Jagakarsa.png" width="400" height="400">
-   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Cilandak.png" width="400" height="400">
+   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Kebayoran%20Baru.png" width="300" height="300">
+   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Kebayoran%20Lama.png" width="300" height="300">
+   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Jagakarsa.png" width="300" height="300">
+   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/Cilandak.png" width="300" height="300">
 </p>
 
 [database_process](https://github.com/mohgavin/code-repository/tree/main/database_process) --> I created this code to have better display of showing radio equipment per sector. I build executable files in Windows to be worked in other computer and anyone can run the script without having to install environment in the computer. 
