@@ -61,7 +61,7 @@ pip3 install requirements.txt
 </p>
 
 <p align="center">
-  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/pivot_totalpopulation_jaksel.png" width="1200" height="400">
+  <img src="https://github.com/mohgavin/code-repository/blob/main/picture/pivot_totalpopulation_jaksel.png" width="1080" height="720">
 </p>
 
 [database_process](https://github.com/mohgavin/code-repository/tree/main/database_process) --> I created this code to have better display of showing radio equipment per sector. I build executable files in Windows to be worked in other computer and anyone can run the script without having to install environment in the computer. 
