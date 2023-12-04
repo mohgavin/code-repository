@@ -24,7 +24,7 @@ pip3 install requirements.txt
 
 [forecast](https://github.com/mohgavin/code-repository/tree/main/forecast) --> These are python script collection of forecast traffic/active user model algorithm (wwhich consist of : ARIMA, SARIMA, Holt-Winters, and Prophet). I am using Multi process (usage on core/thread) implementation in python helps to enable parallelization of forecasting so it can speed up the computation (Comparison : 7 Hours Single Threads vs 1 Hours With 12 Multi Core and Threads). 
 
-As shown in the graph below, there are an impact of holiday in active user in time series below either it is an increase trend or decrease of user traffic. And by using these model, we can forecast how big the impact of holiday or any other special day.  
+As shown in the graph below, there are an impact of holiday in active user in time series below either it is an increase trend or decrease of user traffic. And by using these model, we can forecast in near future on how big the impact of holiday or any other special day.  
 <p align="center">
   <img src="https://github.com/mohgavin/code-repository/blob/main/picture/AB%20Testing%20-%20ARIMA%20vs%20Prophet.png">
 </p>
